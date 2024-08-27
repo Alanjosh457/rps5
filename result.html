@@ -101,14 +101,14 @@
     </div>
 
     <script>
-        // Retrieve values from sessionStorage
+     
         const playerChoice = sessionStorage.getItem('playerChoice');
         const computerChoice = sessionStorage.getItem('computerChoice');
         const result = sessionStorage.getItem('result');
         const playerScore = sessionStorage.getItem('playerScore');
         const computerScore = sessionStorage.getItem('computerScore');
 
-        // Mapping of choices to HTML buttons
+     
         const choiceMap = {
             'rock': '<button id="fist"><img src="images/icons8-fist-67 1.png" class="img1"></button>',
             'paper': '<button id="hand"><img src="images/icons8-hand-64 1.png" class="img2"></button>',
@@ -144,7 +144,7 @@
             window.location.href = 'celeb.html';
         }
 
-        // Toggle display of rules and bulletins when the RULES button is clicked
+  
         document.getElementById('rul').addEventListener('click', function() {
             const ruleBox = document.querySelector('.rb');
             const rulesContent = document.querySelector('.rules');
