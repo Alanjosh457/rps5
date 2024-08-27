@@ -3,11 +3,11 @@ if (sessionStorage.getItem('playerScore') === null || sessionStorage.getItem('co
     sessionStorage.setItem('computerScore', 0);
 }
 
-// Fetch scores from sessionStorage
+
 let playerScore = parseInt(sessionStorage.getItem('playerScore'));
 let computerScore = parseInt(sessionStorage.getItem('computerScore'));
 
-// Display the scores on the page
+
 document.getElementById("playerScoreDisplay").textContent = playerScore;
 document.getElementById("computerScoreDisplay").textContent = computerScore;
 
@@ -38,23 +38,20 @@ function playGame(playerChoice) {
         computerScore++;
     }
 
-    // Store updated scores in sessionStorage
     sessionStorage.setItem('playerScore', playerScore);
     sessionStorage.setItem('computerScore', computerScore);
 
-    // Store choices and result in sessionStorage
     sessionStorage.setItem('playerChoice', playerChoice);
     sessionStorage.setItem('computerChoice', computerChoice);
     sessionStorage.setItem('result', result);
 
-    // Navigate to result page
     window.location.href = 'result.html';
 }
 document.getElementById('rul').addEventListener('click', function() {
     var rulesSection = document.getElementById('rulesSection');
     var rulesBox = document.getElementById('rulesBox');
 
-    // Toggle visibility
+ 
     if (rulesSection.style.display === 'none') {
         rulesSection.style.display = 'block';
         rulesBox.style.display = 'block';
